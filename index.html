@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./estilos/navStyle.css">
+    <link rel="stylesheet" href="./estilos/style.css">
+    <link rel="stylesheet" href="./estilos/descargar.css">
+    <title> Proyecto SE 1.1 </title>
+</head>
+<body>
+    
+    <nav class="nav">
+
+        <div class="nav__container">
+
+            <h1 class="nav__title" id="titulo"> </h1>
+
+            <!-- Parte del boton para abrir y cerrar el dropdown -->
+            <a href="#menu" class="nav__menu">
+                <img src="./assets/menu.svg" class="nav__icon">
+            </a>
+
+            <a href="#" class="nav__menu nav__menu--second">
+                <img src="./assets/close.svg" class="nav__icon ">
+            </a>
+
+            <ul class="dropdown" id="menu">
+
+                <li class="dropdown__list">
+                    <span href="#" class="dropdown__link" id="cargar-archivo">
+                        <img src="./assets/projects.svg" class="dropdown__icon">
+                        <span class="dropdown__span">Cargar archivo</span>
+                    </span>
+                </li>
+                
+                <li class="dropdown__list">
+                    <span href="#" class="dropdown__link" id="descargar-archivo">
+                        <img src="./assets/house.svg" class="dropdown__icon">
+                        <span class="dropdown__span">Descargar archivo </span>
+                    </span>
+                </li>
+
+                <li class="dropdown__list">
+                    <span class="dropdown__link" id="cerrar-archivo">
+                        <img src="./assets/close.svg" class="dropdown__icon">
+                        <span class="dropdown__span">Cerrar archivo </span>
+                    </span>
+                </li>
+
+                <!-- Probabilidad alta de usar estos drop downs  -->
+
+                <!-- <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        <img src="./assets/projects.svg" class="dropdown__icon">
+                        <span class="dropdown__span">Projects</span>
+                        <img src="./assets/down.svg" class="dropdown__arrow">
+
+                        <input type="checkbox" class="dropdown__check">
+                    </a>
+
+                    <div class="dropdown__content">
+
+                        <ul class="dropdown__sub">
+
+                            <li class="dropdown__li">
+                                <a href="#" class="dropdown__anchor">Project 1</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="#" class="dropdown__anchor">Project 2</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="#" class="dropdown__anchor">Project 3</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </li> -->
+   
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        <img src="./assets/help.svg" class="dropdown__icon">
+                        <span class="dropdown__span">Acerca del proyecto</span>
+                        <img src="./assets/down.svg" class="dropdown__arrow">
+
+                        <input type="checkbox" class="dropdown__check">
+                    </a>
+
+                    <div class="dropdown__content">
+
+                        <ul class="dropdown__sub">
+
+                            <li class="dropdown__li">
+                                <spa href="#" class="dropdown__anchor">
+                                    <strong>Desarrollado por:</strong> 
+                                    <br><br> Daniel Cueto Torrico
+                                    <br><br>Para la materia de Sistemas Expertos
+                                </spa>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="root"></div>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>

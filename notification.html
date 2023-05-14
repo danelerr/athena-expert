@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./notification.css">
+    <title>notificacion con barra de progreso</title>
+    <style>
+        @keyframes aparecer {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animacion-aparecer {
+            animation: aparecer 1s ease;
+        }
+
+        @keyframes desaparecer {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        .boton-animado {
+            animation: aparecer 1s ease;
+        }
+
+        .eliminado {
+            animation: desaparecer 1s ease forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toast">
+        <div class="toast-content">
+            <i class="fas fa-solid fa-check check"> ✓ </i>
+
+            <div class="message">
+                <span class="text text-1"> Exito </span>
+                <span class="text text-2"> Tus cambios se han salvado perrito </span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark close"> X </i>
+
+        <div class="progress"></div>
+    </div>
+
+    <button> Show Toast </button>
+
+    <button id="btnEliminar" class="boton-animado">Eliminar Botón</button>
+    <div id="root">
+    </div>
+
+    <script>
+        // Función para eliminar un botón
+        function eliminarBoton(event) {
+            const botonAEliminar = event.target;
+            console.log(botonAEliminar);
+
+            // Agrega la clase 'eliminado' para aplicar la animación de desaparición
+            botonAEliminar.classList.add('eliminado');
+
+            // Espera al evento 'animationend' para eliminar el botón
+            botonAEliminar.addEventListener('animationend', function () {
+                botonAEliminar.remove();
+            });
+        }
+
+        // Obtiene el botón "Eliminar Botón"
+        const btnEliminar = document.getElementById('btnEliminar');
+
+        // Agrega el evento click al botón
+        btnEliminar.addEventListener('click', eliminarBoton);
+
+    </script>
+</body>
+
+</html>
